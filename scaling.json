@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Engine scaling",
+  "type": "object",
+  "id": "scaling",
+  "properties": {
+    "DesiredInstanceType": {
+      "type": "string",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    "DesiredPartitionCount": {
+     "type": "integer",
+     "default": 1,
+     "minimum": 1,
+     "maximum": 100
+    },
+    "DesiredReplicationCount": {
+      "type": "integer",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 100
+    }
+  }
+}
